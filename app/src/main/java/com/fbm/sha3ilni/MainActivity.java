@@ -1,6 +1,5 @@
 package com.fbm.sha3ilni;
 
-import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -31,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         usernameField.setTypeface(Typeface.createFromAsset(getAssets(), "stc.otf"));
 
+        b1=(Button)findViewById(R.id.button);
         usernameField=(EditText)findViewById(R.id.username);
         passwordField=(EditText)findViewById(R.id.password);
 
