@@ -1,9 +1,11 @@
 package com.fbm.sha3ilni;
 
+import java.io.Serializable;
+
 /**
  * Created by Mojahed Dameri on 5/13/16.
  */
-public class ReviewModel {
+public class ReviewModel implements Serializable{
 
     int stars;
     String image;

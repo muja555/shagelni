@@ -1,5 +1,6 @@
 package com.fbm.sha3ilni;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         b2=(Button)findViewById(R.id.button1);
 
 
-        b1.setOnClickListener(new View.OnClickListener() {
+        b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
               /*  if(usernameField.getText().toString().equals("admin") &&
@@ -60,10 +61,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        b2.setOnClickListener(new View.OnClickListener() {
+        b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                Intent intent = new Intent(MainActivity.this, MainList.class);
+                startActivity(intent);
             }
         });
     }
