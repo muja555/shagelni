@@ -24,7 +24,8 @@
             android:layout_marginLeft="20dp"
             android:textSize="25sp"
             android:layout_marginRight="20dp"
-            android:background="#55ffffff"
+            android:padding="2dp"
+            android:background="@drawable/rounded_login"
             android:layout_marginBottom="20dp"/>
 
         <EditText
@@ -32,8 +33,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:background="#55ffffff"
+            android:background="@drawable/rounded_login"
             android:textSize="25sp"
+            android:padding="2dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="100dp"/>
     </LinearLayout>
