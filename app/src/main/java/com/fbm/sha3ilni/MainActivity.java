@@ -1,5 +1,6 @@
 package com.fbm.sha3ilni;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -30,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
 
         usernameField.setTypeface(Typeface.createFromAsset(getAssets(), "stc.otf"));
 
-        b1=(Button)findViewById(R.id.button);
         usernameField=(EditText)findViewById(R.id.username);
         passwordField=(EditText)findViewById(R.id.password);
 
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(usernameField.getText().toString().equals("admin") &&
+              /*  if(usernameField.getText().toString().equals("admin") &&
 
                         passwordField.getText().toString().equals("admin")) {
                     Toast.makeText(getApplicationContext(), "Redirecting...",Toast.LENGTH_SHORT).show();
@@ -50,6 +50,13 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Wrong Credentials",Toast.LENGTH_SHORT).show();
 
                 }
+                */
+                Intent intent = new Intent(MainActivity.this, Signup.class);
+               // EditText editText = (EditText) findViewById(R.id.edit_message);
+              //  String message = editText.getText().toString();
+               // intent.putExtra(EXTRA_MESSAGE, message);
+                startActivity(intent);
+
             }
         });
 
