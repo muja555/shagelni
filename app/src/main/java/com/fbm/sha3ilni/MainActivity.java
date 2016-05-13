@@ -1,5 +1,6 @@
 package com.fbm.sha3ilni;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -40,16 +41,10 @@ public class MainActivity extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(usernameField.getText().toString().equals("admin") &&
 
-                        passwordField.getText().toString().equals("admin")) {
-                    Toast.makeText(getApplicationContext(), "Redirecting...",Toast.LENGTH_SHORT).show();
+                MainActivity.this.startActivity(new Intent(MainActivity.this, MainList.class));
+                finish();
 
-                }
-                else{
-                    Toast.makeText(getApplicationContext(), "Wrong Credentials",Toast.LENGTH_SHORT).show();
-
-                }
             }
         });
 
