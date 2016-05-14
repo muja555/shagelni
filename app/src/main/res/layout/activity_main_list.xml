@@ -1,13 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_scroll"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffff"
     tools:context="com.fbm.sha3ilni.MainList">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/main_list"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</RelativeLayout>
+        <LinearLayout
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bottom_border"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/search_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/search"
+                android:textColor="#a19e9e"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.8"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="0.2"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"
+                android:src="@drawable/searrr"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/near_me_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="@string/near_me"
+            android:paddingRight="20dp"
+            android:gravity="right"
+            android:background="@drawable/top_bottom_border"
+            android:layout_gravity="right"
+            android:layout_marginBottom="5dp"
+            android:textColor="#d48a5c"/>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/main_list_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/see_more_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="20dp"
+            android:layout_gravity="right"
+            android:text="@string/see_more"
+            android:textColor="#d48a5c"
+            android:textSize="18sp"
+            android:layout_marginBottom="40dp"/>
+
+        <TextView
+            android:id="@+id/other_me_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:paddingRight="20dp"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:text="@string/other"
+            android:background="@drawable/top_bottom_border"
+            android:layout_marginBottom="5dp"
+            android:textColor="#d48a5c"/>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/main_list_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"/>
+
+
+        <TextView
+            android:id="@+id/see_more_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="20dp"
+            android:layout_gravity="right"
+            android:text="@string/see_more"
+            android:textColor="#d48a5c"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"/>
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

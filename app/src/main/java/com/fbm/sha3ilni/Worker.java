@@ -1,6 +1,9 @@
 package com.fbm.sha3ilni;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * Created by Mojahed Dameri on 5/13/16.
@@ -151,4 +154,29 @@ public class Worker implements Serializable {
     public void setId(int id) {
         this.id = id;
     }
+
+    public static List<Worker>[] getNearMe(List<Worker> workersListAll) {
+
+        List<Worker>[] res =  new List[2];
+
+        res[0] = new ArrayList<>();
+
+        res[1] = new ArrayList<>();
+
+        for (Worker worker : workersListAll) {
+
+            if (worker.getCity().equalsIgnoreCase("رامالله")) {
+
+                res[0].add(worker);
+
+            }  else {
+
+                res[1].add(worker);
+            }
+
+        }
+
+        return res;
+    }
+
 }
