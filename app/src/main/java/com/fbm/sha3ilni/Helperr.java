@@ -9,7 +9,7 @@ import java.util.BitSet;
 /**
  * Created by Mojahed Dameri on 5/14/16.
  */
-public class Helper {
+public class Helperr {
 
     public static Bitmap fromBase64(String str) {
 

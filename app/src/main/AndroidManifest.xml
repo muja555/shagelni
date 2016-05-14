@@ -27,7 +27,7 @@
             android:name=".Signup"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Profile"
+            android:name=".Profilee"
             android:screenOrientation="portrait" />
         <activity
             android:name=".MainList"

@@ -46,7 +46,7 @@ public class MainListAdapter extends RecyclerView.Adapter<MainListAdapter.MainLi
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(context, Profile.class);
+                Intent intent = new Intent(context, Profilee.class);
 
                 String serializdObj = new Gson().toJson(workerList.get(pos));
 
@@ -65,7 +65,7 @@ public class MainListAdapter extends RecyclerView.Adapter<MainListAdapter.MainLi
 
         holder.address.setText(workerList.get(position).getCity() +", "+workerList.get(position).getAddress());
 
-        holder.image.setImageBitmap(Helper.fromBase64(workerList.get(position).getImage()));
+        holder.image.setImageBitmap(Helperr.fromBase64(workerList.get(position).getImage()));
 
         holder.ratingBar.setRating(workerList.get(position).getStars());
 
