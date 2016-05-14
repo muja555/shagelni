@@ -5,7 +5,7 @@
     android:orientation="horizontal"
     android:padding="10dp"
     android:weightSum="1"
-    android:background="@drawable/bottom_border">
+    android:background="@drawable/bottom_border_trans">
 
 
         <com.fbm.sha3ilni.RoundedImageView
@@ -13,6 +13,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.25"
+            android:layout_gravity="top"
+            android:foregroundGravity="top"
             android:scaleType="fitCenter" />
 
 
@@ -27,36 +29,27 @@
                 android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:gravity="right"
+                android:layout_marginBottom="15dp"
+                android:gravity="center"
                 android:text="dasdas sds"
                 android:textColor="#000"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/address"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="right"
-                android:text="dasdas sds"
-                android:textColor="#000"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/rate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="right"
-                android:text="dasdas sds"
-                android:textColor="#000"
-                android:textSize="17sp" />
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="dasdas sds"
+                    android:textColor="#000"
+                    android:textSize="20sp" />
 
             <RatingBar
                 android:id="@+id/ratingBar"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:layout_gravity="right"
-                android:foregroundGravity="right"
+                android:layout_gravity="center"
+                android:foregroundGravity="center"
                 android:numStars="4"
                 android:isIndicator="true"
                 android:rating="5"
@@ -64,6 +57,16 @@
                 android:scaleX="0.4"
                 android:scaleY="0.4"
                 android:theme="@style/RatingBar" />
+
+
+            <TextView
+                android:id="@+id/dec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="dasdas sds"
+                android:textColor="#000"
+                android:textSize="17sp" />
 
 
         </LinearLayout>

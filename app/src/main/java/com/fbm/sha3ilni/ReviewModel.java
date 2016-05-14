@@ -1,13 +1,16 @@
 package com.fbm.sha3ilni;
 
+import java.io.Serializable;
+
 /**
  * Created by Mojahed Dameri on 5/13/16.
  */
-public class ReviewModel {
+public class ReviewModel implements Serializable{
 
     int stars;
     String image;
     String title;
+    String name;
     String comment;
 
     public int getStars() {
@@ -40,5 +43,13 @@ public class ReviewModel {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public String getName() {
+        return name.trim();
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

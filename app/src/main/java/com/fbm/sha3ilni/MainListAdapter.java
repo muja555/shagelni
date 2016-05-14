@@ -1,18 +1,19 @@
 package com.fbm.sha3ilni;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.Typeface;
-import android.support.v7.widget.ContentFrameLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.view.textservice.TextInfo;
 import android.widget.RatingBar;
 import android.widget.TextView;
+
+import com.google.gson.Gson;
 
 import java.util.List;
 
@@ -25,40 +26,63 @@ public class MainListAdapter extends RecyclerView.Adapter<MainListAdapter.MainLi
 
     List<Worker> workerList;
 
-    public MainListAdapter(Context c,  List<Worker> wLi){
+    int itemsCount = 0;
+
+    public MainListAdapter(Context c,  List<Worker> wLi, int itemsCount){
 
         context = c;
 
         workerList = wLi;
+
+        this.itemsCount = itemsCount;
 
     }
 
     @Override
     public MainListViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.view_main_list_item, parent, false);
+        final int pos = viewType;
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                Intent intent = new Intent(context, Profilee.class);
+
+                String serializdObj = new Gson().toJson(workerList.get(pos));
+
+                intent.putExtra("extra",serializdObj);
+
+                context.startActivity(intent);
+            }
+        });
         return new MainListViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(MainListViewHolder holder, int position) {
+    public void onBindViewHolder(MainListViewHolder holder, final int position) {
 
         holder.name.setText(workerList.get(position).getFullName());
 
-        holder.address.setText(workerList.get(position).getAddress());
+        holder.address.setText(workerList.get(position).getCity() +", "+workerList.get(position).getAddress());
 
-        holder.image.setImageBitmap(Helper.fromBase64(workerList.get(position).getImage()));
+        holder.image.setImageBitmap(Helperr.fromBase64(workerList.get(position).getImage()));
 
-        holder.ratingBar.setNumStars(workerList.get(position).getStars());
+        holder.ratingBar.setRating(workerList.get(position).getStars());
 
         holder.rate.setText(workerList.get(position).getRateHour() +"$ "+ "\\ " + "ساعة");
+
     }
 
     @Override
     public int getItemCount() {
-        return workerList.size();
+        return itemsCount;
     }
 
+
+    @Override
+    public int getItemViewType(int position) {
+        return position;
+    }
 
     public class MainListViewHolder extends RecyclerView.ViewHolder{
 
@@ -86,7 +110,7 @@ public class MainListAdapter extends RecyclerView.Adapter<MainListAdapter.MainLi
 
             address.setTypeface(Typeface.createFromAsset(context.getAssets(), "stc.otf"));
 
-            itemView.getLayoutParams().height = getScreenHeight()/ 5;
+            ratingBar.setNumStars(5);
 
         }
 

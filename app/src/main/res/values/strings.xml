@@ -5,10 +5,15 @@
     <string name="email"> البريد الالكتروني</string>
     <string name="description">معلرمات اضافية</string>
     <string name="fullname">الاسم الكامل</string>
-    <string name="signup">تسجيل</string>
+    <string name="signup">مستخدم جديد</string>
     <string name="signin">دخول</string>
     <string name="phone">رقم الهاتف</string>
     <string name="hour">ساعات العمل</string>
     <string name="ela">الى</string>
     <string name="sure">تآكيد</string>
+    <string name="near_me">بالقرب مني</string>
+    <string name="other">مناطق اخرى</string>
+    <string name="see_more">مشاهدة الكل</string>
+    <string name="search">ابحث</string>
+
 </resources>

@@ -23,14 +23,25 @@
             android:id="@+id/imageView"
             android:layout_above="@+id/linearLayout"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="33dp"
             android:src="@drawable/word" />
+
+        <TextView
+            android:id="@+id/dd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:text=""/>
         <EditText
             android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:text="kamal213"
+            android:textColor="#000"
             android:padding="10dp"
             android:layout_marginBottom="20dp"
             android:hint="@string/username"
@@ -44,7 +55,10 @@
             android:layout_marginLeft="20dp"
             android:padding="10dp"
             android:layout_marginRight="20dp"
+            android:textColor="#000"
             android:layout_marginBottom="100dp"
+            android:password="true"
+            android:text="213445466"
             android:hint="@string/password"
             android:textColorHint="#bbbbbb"/>
 
