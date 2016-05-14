@@ -10,6 +10,7 @@ public class ReviewModel implements Serializable{
     int stars;
     String image;
     String title;
+    String name;
     String comment;
 
     public int getStars() {
@@ -42,5 +43,13 @@ public class ReviewModel implements Serializable{
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public String getName() {
+        return name.trim();
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

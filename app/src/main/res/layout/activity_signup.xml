@@ -33,6 +33,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="-12dp"
             android:padding="10dp"
+            android:text="كمال الطيب"
+            android:textColor="#000"
             android:hint="@string/fullname"
             android:textColorHint="#bbbbbb"/>
         <EditText
@@ -40,22 +42,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="-2dp"
-            android:padding="10dp"
+            android:padding="10dp" android:textColor="#000"
+
             android:hint="@string/phone"
+            android:text="0598597310"
             android:textColorHint="#bbbbbb"/>
 
         <EditText
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#000"
             android:padding="10dp"
             android:hint="@string/email"
+            android:text="kamal.1985@gmail.com"
             android:textColorHint="#bbbbbb"/>
         <EditText
             android:id="@+id/etUserName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
+            android:textColor="#000"
+            android:text="kamal123"
             android:layout_marginTop="-2dp"
             android:padding="10dp"
             android:hint="@string/username"
@@ -67,18 +74,44 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="-2dp"
             android:padding="10dp"
+            android:text="123456778"
+            android:textColor="#000"
             android:hint="@string/password"
             android:textColorHint="#bbbbbb"
             android:password="true"
             android:gravity="right"/>
 
         <EditText
+            android:id="@+id/city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:text="رام الله"
+            android:layout_marginTop="-2dp"
+            android:padding="10dp"
+            android:hint=""
+            android:textColorHint="#bbbbbb"/>
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:text="الحي الغربي بالقرب من شارع فريد"
+            android:layout_marginTop="-2dp"
+            android:padding="10dp"
+            android:hint=""
+            android:textColorHint="#bbbbbb"/>
+
+        <EditText
             android:id="@+id/etDesc"
             android:layout_width="match_parent"
             android:layout_height="90dp"
+            android:textColor="#000"
             android:layout_marginTop="-2dp"
             android:padding="10dp"
-            android:hint="@string/description"
+android:text="لدي فيلا في اسكان الغربية تحتاج الى تنظيف مستمر مع مراعاة الاعتناء بكلبي الاليف في حال حدوث امر ما"
+                 android:hint="@string/description"
             android:textColorHint="#bbbbbb"/>
 
         <Button
@@ -88,7 +121,7 @@
             android:padding="10dp"
             android:gravity="center"
             android:layout_margin="4dp"
-            android:text="@string/signup"
+            android:text="سجل الان"
             android:background="@drawable/rounded_login"
             android:textColor="#000000"
 

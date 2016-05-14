@@ -5,7 +5,7 @@
     <string name="email"> البريد الالكتروني</string>
     <string name="description">معلرمات اضافية</string>
     <string name="fullname">الاسم الكامل</string>
-    <string name="signup">تسجيل</string>
+    <string name="signup">مستخدم جديد</string>
     <string name="signin">دخول</string>
     <string name="phone">رقم الهاتف</string>
     <string name="near_me">بالقرب مني</string>
