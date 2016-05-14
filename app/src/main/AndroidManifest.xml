@@ -23,7 +23,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainList"></activity>
+        <activity android:name=".Signup" android:screenOrientation="portrait"></activity>
+        <activity android:name=".Profile" android:screenOrientation="portrait"></activity>
+        <activity android:name=".MainList" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

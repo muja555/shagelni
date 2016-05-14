@@ -38,20 +38,34 @@ public class MainActivity extends AppCompatActivity {
         b2=(Button)findViewById(R.id.button1);
 
 
-        b1.setOnClickListener(new View.OnClickListener() {
+        b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+              /*  if(usernameField.getText().toString().equals("admin") &&
 
-                MainActivity.this.startActivity(new Intent(MainActivity.this, MainList.class));
-                finish();
+                        passwordField.getText().toString().equals("admin")) {
+                    Toast.makeText(getApplicationContext(), "Redirecting...",Toast.LENGTH_SHORT).show();
+
+                }
+                else{
+                    Toast.makeText(getApplicationContext(), "Wrong Credentials",Toast.LENGTH_SHORT).show();
+
+                }
+                */
+                Intent intent = new Intent(MainActivity.this, Signup.class);
+               // EditText editText = (EditText) findViewById(R.id.edit_message);
+              //  String message = editText.getText().toString();
+               // intent.putExtra(EXTRA_MESSAGE, message);
+                startActivity(intent);
 
             }
         });
 
-        b2.setOnClickListener(new View.OnClickListener() {
+        b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                Intent intent = new Intent(MainActivity.this, MainList.class);
+                startActivity(intent);
             }
         });
     }

@@ -1,18 +1,19 @@
 package com.fbm.sha3ilni;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.Typeface;
-import android.support.v7.widget.ContentFrameLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.view.textservice.TextInfo;
 import android.widget.RatingBar;
 import android.widget.TextView;
+
+import com.google.gson.Gson;
 
 import java.util.List;
 
@@ -41,7 +42,7 @@ public class MainListAdapter extends RecyclerView.Adapter<MainListAdapter.MainLi
     }
 
     @Override
-    public void onBindViewHolder(MainListViewHolder holder, int position) {
+    public void onBindViewHolder(MainListViewHolder holder, final int position) {
 
         holder.name.setText(workerList.get(position).getFullName());
 
@@ -52,6 +53,19 @@ public class MainListAdapter extends RecyclerView.Adapter<MainListAdapter.MainLi
         holder.ratingBar.setNumStars(workerList.get(position).getStars());
 
         holder.rate.setText(workerList.get(position).getRateHour() +"$ "+ "\\ " + "ساعة");
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(context, Profile.class);
+
+                String serializdObj = new Gson().toJson(workerList.get(position));
+                intent.putExtra("extra",serializdObj);
+
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
