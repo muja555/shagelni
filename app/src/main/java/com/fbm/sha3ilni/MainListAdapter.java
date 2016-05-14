@@ -26,18 +26,35 @@ public class MainListAdapter extends RecyclerView.Adapter<MainListAdapter.MainLi
 
     List<Worker> workerList;
 
-    public MainListAdapter(Context c,  List<Worker> wLi){
+    int itemsCount = 0;
+
+    public MainListAdapter(Context c,  List<Worker> wLi, int itemsCount){
 
         context = c;
 
         workerList = wLi;
+
+        this.itemsCount = itemsCount;
 
     }
 
     @Override
     public MainListViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.view_main_list_item, parent, false);
+        final int pos = viewType;
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                Intent intent = new Intent(context, Profile.class);
+
+                String serializdObj = new Gson().toJson(workerList.get(pos));
+
+                intent.putExtra("extra",serializdObj);
+
+                context.startActivity(intent);
+            }
+        });
         return new MainListViewHolder(view);
     }
 
@@ -46,33 +63,26 @@ public class MainListAdapter extends RecyclerView.Adapter<MainListAdapter.MainLi
 
         holder.name.setText(workerList.get(position).getFullName());
 
-        holder.address.setText(workerList.get(position).getAddress());
+        holder.address.setText(workerList.get(position).getCity() +", "+workerList.get(position).getAddress());
 
         holder.image.setImageBitmap(Helper.fromBase64(workerList.get(position).getImage()));
 
-        holder.ratingBar.setNumStars(workerList.get(position).getStars());
+        holder.ratingBar.setRating(workerList.get(position).getStars());
 
         holder.rate.setText(workerList.get(position).getRateHour() +"$ "+ "\\ " + "ساعة");
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(context, Profile.class);
-
-                String serializdObj = new Gson().toJson(workerList.get(position));
-                intent.putExtra("extra",serializdObj);
-
-                context.startActivity(intent);
-            }
-        });
     }
 
     @Override
     public int getItemCount() {
-        return workerList.size();
+        return itemsCount;
     }
 
+
+    @Override
+    public int getItemViewType(int position) {
+        return position;
+    }
 
     public class MainListViewHolder extends RecyclerView.ViewHolder{
 
@@ -100,7 +110,7 @@ public class MainListAdapter extends RecyclerView.Adapter<MainListAdapter.MainLi
 
             address.setTypeface(Typeface.createFromAsset(context.getAssets(), "stc.otf"));
 
-            itemView.getLayoutParams().height = getScreenHeight()/ 5;
+            ratingBar.setNumStars(5);
 
         }
 

@@ -1,5 +1,6 @@
 package com.fbm.sha3ilni;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
@@ -25,6 +26,9 @@ public class Profile extends AppCompatActivity {
 
         worker = new Gson().fromJson(getIntent().getStringExtra("extra"), Worker.class);
 
+
+        //font like this
+        //tv5.setTypeface(Typeface.createFromAsset(getAssets(), "stc.otf"));
     }
 
 
