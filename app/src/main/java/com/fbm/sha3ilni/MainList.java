@@ -25,7 +25,9 @@ public class MainList extends AppCompatActivity {
         setContentView(R.layout.activity_main_list);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+
             ((ScrollView) findViewById(R.id.main_scroll)).setNestedScrollingEnabled(false);
+
         }
 
         ((TextView) findViewById(R.id.see_more_1)).setTypeface(Typeface.createFromAsset(getAssets(), "stc.otf"));
@@ -71,6 +73,8 @@ public class MainList extends AppCompatActivity {
 
                 intent.putExtra("extra",serializdObj);
 
+                intent.putExtra("title",(MainList.this.getString(R.string.near_me)));
+
                 MainList.this.startActivity(intent);
 
             }
@@ -85,6 +89,8 @@ public class MainList extends AppCompatActivity {
                 String serializdObj = new Gson().toJson(workersListAll);
 
                 intent.putExtra("extra",serializdObj);
+
+                intent.putExtra("title",(MainList.this.getString(R.string.other)));
 
                 MainList.this.startActivity(intent);
 
