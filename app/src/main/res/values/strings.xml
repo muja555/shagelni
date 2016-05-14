@@ -3,9 +3,12 @@
     <string name="username">اسم المستخدم</string>
     <string name="password">كلمة المرور</string>
     <string name="email"> البريد الالكتروني</string>
-    <string name="description" >معلرمات اضافية</string>
+    <string name="description">معلرمات اضافية</string>
     <string name="fullname">الاسم الكامل</string>
     <string name="signup">تسجيل</string>
     <string name="signin">دخول</string>
     <string name="phone">رقم الهاتف</string>
+    <string name="hour">ساعات العمل</string>
+    <string name="ela">الى</string>
+    <string name="sure">تآكيد</string>
 </resources>

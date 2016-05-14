@@ -1,5 +1,7 @@
 package com.fbm.sha3ilni;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +9,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
 import android.widget.Button;
+import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.io.FileInputStream;
@@ -29,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         passwordField = (EditText) findViewById(R.id.password);
 
         usernameField.setTypeface(Typeface.createFromAsset(getAssets(), "stc.otf"));
+
+
 
         b1=(Button)findViewById(R.id.button);
         usernameField=(EditText)findViewById(R.id.username);
@@ -66,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+
     }
     }
 
